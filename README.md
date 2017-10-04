@@ -34,3 +34,32 @@ Using [haxe-modular](https://github.com/elsassph/haxe-modular) it is possible to
 
   '), rootElement);
 ````
+
+## Tips
+
+### Q. how to use a High-Order Component with a modular route?
+
+You must apply your HOC after the class is loaded.
+
+To keep using `RouteBundle.load` you can wrap the view with a container:
+
+```haxe
+<Route path="login" getComponent=${RouteBundle.load(LoginContainer)} />
+
+class LoginContainer extends ReactComponent {
+    static var LoginViewWithRouter = withRouter(LoginView); // HOC
+    override function render() {
+        return jsx('<LoginViewWithRouter {...props} />
+    }
+}
+```
+Otherwise you have to use the `Bundle.load` promise and follow the `getComponent` 
+callback API and use the HOC when the class is loaded.
+
+### Q. what is the syntax to set an event handler
+
+```haxe
+<Route path="/" component=${Home} onEnter=${enterHandler} />
+
+function enterHandler(nextState:RouterState, replace:String->Void, completed:Void->Void)
+```
