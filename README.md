@@ -1,6 +1,6 @@
 # React-router externs for Haxe
 
-Simple externs for [react-router](https://github.com/ReactTraining/react-router) 3.0.0+ 
+Simple externs for [react-router](https://github.com/ReactTraining/react-router) 3.0.0+ (not 4!)
 for use with [Haxe react](https://github.com/massiveinteractive/haxe-react) 1.0.0+.
 
 ```haxe
@@ -56,7 +56,7 @@ class LoginContainer extends ReactComponent {
 Otherwise you have to use the `Bundle.load` promise and follow the `getComponent` 
 callback API and use the HOC when the class is loaded.
 
-### Q. what is the syntax to set an event handler
+### Q. what is the syntax to set an event handler?
 
 ```haxe
 <Route path="/" component=${Home} onEnter=${enterHandler} />
