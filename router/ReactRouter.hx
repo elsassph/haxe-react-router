@@ -8,8 +8,8 @@ typedef RouterHistory = Dynamic;
  * React-router API
  * https://github.com/ReactTraining/react-router/blob/master/docs/API.md
  */
-@:jsRequire('react-router')
-extern class ReactRouter 
+@:jsRequire('react-router-dom')
+extern class ReactRouter
 {
 	/** HTML5 history */
 	static public var browserHistory:RouterHistory;
@@ -28,7 +28,7 @@ typedef RouterProps = {
 	?render:Dynamic->ReactElement //<RouterContext>
 }
 
-@:jsRequire('react-router', 'Router')
+@:jsRequire('react-router-dom', 'Router')
 extern class Router extends ReactComponentOfProps<RouterProps>
 {
 	public var location:RouterLocation;
@@ -63,13 +63,13 @@ typedef RouteProps = {>BaseRouteProps,
 	path:String
 }
 
-@:jsRequire('react-router', 'Route')
+@:jsRequire('react-router-dom', 'Route')
 extern class Route extends ReactComponentOfProps<RouteProps>
 {
 }
 
 
-@:jsRequire('react-router', 'IndexRoute')
+@:jsRequire('react-router-dom', 'IndexRoute')
 extern class IndexRoute extends ReactComponentOfProps<BaseRouteProps>
 {
 }
@@ -80,7 +80,7 @@ typedef RedirectProps = {
 	to:Dynamic
 }
 
-@:jsRequire('react-router', 'Redirect')
+@:jsRequire('react-router-dom', 'Redirect')
 extern class Redirect extends ReactComponentOfProps<RedirectProps>
 {
 }
@@ -90,7 +90,7 @@ typedef IndexRedirectProps = {
 	to:Dynamic
 }
 
-@:jsRequire('react-router', 'IndexRedirect')
+@:jsRequire('react-router-dom', 'IndexRedirect')
 extern class IndexRedirect extends ReactComponentOfProps<IndexRedirectProps>
 {
 }

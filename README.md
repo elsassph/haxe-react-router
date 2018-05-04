@@ -1,3 +1,9 @@
+Fork and branch to support react-router-dom 4.
+
+Npm install:
+
+    npm install react-router-dom
+
 # React-router externs for Haxe
 
 Simple externs for [react-router](https://github.com/ReactTraining/react-router) 3.0.0+ (not 4!)
@@ -7,14 +13,14 @@ for use with [Haxe react](https://github.com/massiveinteractive/haxe-react) 1.0.
   var history = ReactRouter.browserHistory;
 
   var app = ReactDOM.render(jsx('
-  
+
     <Router history=$history>
       <Route path="/" component=$PageWrapper>
         <IndexRoute component=$HomeView/>
         <Route path="about" component=$AboutView/>
       </Route>
     </Router>
-      
+
   '), rootElement);
 ```
 
