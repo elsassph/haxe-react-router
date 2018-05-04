@@ -19,7 +19,7 @@ typedef LinkProps = {
 	?rel:String
 }
 
-@:jsRequire('react-router', 'Link')
+@:jsRequire('react-router-dom', 'Link')
 extern class Link extends ReactComponentOfProps<LinkProps>
 {
 }
